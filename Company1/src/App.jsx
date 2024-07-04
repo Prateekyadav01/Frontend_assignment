@@ -1,6 +1,8 @@
 
 import './App.css'
 import Navbar from './Components/core/Navbar'
+import Search from './Components/core/Search'
+import Product from './Components/data/Product'
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
   return (
     <>
     <Navbar/>
+    <Search/>
+    <Product/>
     </>
   )
 }

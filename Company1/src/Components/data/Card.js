@@ -1,4 +1,4 @@
-const resntdata=[
+ export const resntdata=[
     {
         imgurl:"https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         title:"House1",
