@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const searchSlice = createSlice({
   name: 'search',
   initialState: {
+    showData:false,
     city:'',
     searchText: '',
     price:{
@@ -10,8 +11,13 @@ const searchSlice = createSlice({
       lower:'',
     },
     property:'',
+    likes:[],
+    likeClick :false,
   },
   reducers: {
+    setShowData: (state, action) => {
+      state.showData = action.payload; 
+    },
     setSearchTerm: (state, action) => {
       state.searchText = action.payload; 
     },
@@ -25,9 +31,15 @@ const searchSlice = createSlice({
     setCity:(state,action)=>{
       state.city = action.payload;
     },
+    setLike:(state,action)=>{
+      state.likes.push(action.payload);
+    },
+    setLikeClick:(state,action)=>{
+      state.likeClick = action.payload;
+    }
   },
 });
 
-export const { setSearchTerm , setPriceRange,setPropertyRange,setCity } = searchSlice.actions;
+export const { setLikeClick,setLike,setShowData,setSearchTerm , setPriceRange,setPropertyRange,setCity } = searchSlice.actions;
 
 export default searchSlice.reducer;
